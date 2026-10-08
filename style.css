@@ -1,0 +1,620 @@
+/* ==========================================================================
+   CSS Variables
+   ========================================================================== */
+:root {
+    --bg-main: #1f1f38;
+    --bg-glass: rgba(44, 44, 108, 0.4);
+    --bg-glass-hover: rgba(44, 44, 108, 0.6);
+    --primary: #4db5ff;
+    --primary-hover: #ffffff;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af; /* gray-400 */
+    --border-glass: rgba(77, 181, 255, 0.15);
+    
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --blur-glass: blur(12px);
+    
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    
+    --transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus State for Accessibility */
+:focus-visible {
+    outline: 2px dashed var(--primary);
+    outline-offset: 4px;
+}
+
+/* ==========================================================================
+   Background & Glassmorphism Utilities
+   ========================================================================== */
+.bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.orb-1 {
+    top: -100px;
+    left: -100px;
+    width: 40vw;
+    height: 40vw;
+    background: rgba(77, 181, 255, 0.2);
+}
+
+.orb-2 {
+    bottom: -100px;
+    right: -100px;
+    width: 30vw;
+    height: 30vw;
+    background: rgba(147, 51, 234, 0.15); /* Subtle purple for depth */
+}
+
+/* Glass Card Style */
+.glass-card {
+    background: var(--bg-glass);
+    backdrop-filter: var(--blur-glass);
+    -webkit-backdrop-filter: var(--blur-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-glass);
+    transition: var(--transition);
+}
+
+.glass-card:hover {
+    background: var(--bg-glass-hover);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--bg-main);
+    border: 1px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--bg-main);
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(31, 31, 56, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-glass);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    padding: 0.5rem;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    transition: var(--transition);
+    border-radius: 3px;
+}
+
+/* ==========================================================================
+   About / Hero Section
+   ========================================================================== */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 8rem;
+    gap: 3rem;
+}
+
+.about-content .title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.professional-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about-bio {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.about-bio:hover {
+    transform: none; /* Disable hover float for bio text */
+}
+
+.about-image-container {
+    width: 250px;
+    height: 320px;
+    padding: 0.5rem;
+    border-radius: 10rem 10rem 2rem 2rem;
+    background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+.about-image-container:hover {
+    transform: translateY(-10px);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10rem 10rem 2rem 2rem;
+}
+
+/* ==========================================================================
+   Skills Section
+   ========================================================================== */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skills-card {
+    padding: 2rem;
+}
+
+.skills-title {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.skill-icon {
+    color: var(--primary);
+    margin-top: 0.1rem;
+}
+
+.skill-item h4 {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.skill-level {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Projects Section
+   ========================================================================== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-glass);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-subtitle {
+    font-size: 0.75rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.project-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+
+
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info-column,
+.contact-social-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-icon {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.contact-card-title {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+}
+
+.contact-card-detail {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.contact-link {
+    font-size: 0.875rem;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+/* Social Card Specifics */
+.social-card {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 40px 0 rgba(77, 181, 255, 0.2);
+}
+
+.social-card:hover .contact-icon {
+    transform: scale(1.1);
+    color: var(--primary);
+}
+
+.social-card:hover .contact-link {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+    background: rgba(31, 31, 56, 0.9);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-glass);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Media Queries (Responsive Design)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    .about {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+    
+    .about-buttons {
+        justify-content: flex-start;
+    }
+    
+    .about-bio {
+        margin: 0;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(31, 31, 56, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 6rem 2rem;
+        transition: right 0.4s ease;
+        border-left: 1px solid var(--border-glass);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Hamburger Animation Classes */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .about-content .title {
+        font-size: 2.5rem;
+    }
+}
+
+/* ==========================================================================
+   Accessibility - Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

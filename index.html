@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian T. Costales - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Decorative Background Orbs -->
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo"></a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero / About Me Section -->
+        <section id="about" class="about section container">
+            <div class="about-content">
+                <span class="subtitle">Hello, I'm</span>
+                <h1 class="title">Christian T. Costales</h1>
+                <h2 class="professional-title">BSIT Student & Software Developer</h2>
+                
+                <div class="about-buttons">
+                    <a href="#contact" class="btn btn-outline">Work With Me</a>
+                    <a href="#projects" class="btn btn-primary">See My Past Work</a>
+                </div>
+
+                <div class="about-bio glass-card">
+                    <p>I am a 21-year-old Information Technology student based in Marilao, Bulacan, currently in my third year at CICT. I specialize in developing relational databases and backend software using Java, SQL, and PHP. Alongside my technical work, I served as a student council board member, applying my skills to build platforms that support student welfare and academic transparency.</p>
+                </div>
+            </div>
+
+            <div class="about-image-container glass-card">
+                <img src="assets/profile.jpg" alt="Christian T. Costales" class="about-img">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section container">
+            <div class="section-header">
+                <span class="subtitle">What Skills I Have</span>
+                <h2 class="title">My Experience</h2>
+            </div>
+
+            <div class="skills-container">
+                <!-- Frontend Skills -->
+                <article class="glass-card skills-card">
+                    <h3 class="skills-title">Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>React JS</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>HTML</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>CSS</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>JavaScript</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>PHP</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Backend Skills -->
+                <article class="glass-card skills-card">
+                    <h3 class="skills-title">Backend & Databases</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>Java (AWT/Swing/JDBC)</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>SQL (MySQL/MSSQL)</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>PHP Web Architecture</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" aria-hidden="true">✧</span>
+                            <div>
+                                <h4>MongoDB Basics</h4>
+                                <span class="skill-level">Experienced</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section container">
+            <div class="section-header">
+                <span class="subtitle">My Recent Work</span>
+                <h2 class="title">Portfolio</h2>
+            </div>
+
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <article class="glass-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/sunlife.jpg" alt="SunLife Online Insurance System" class="project-img">
+                    </div>
+                    <h3 class="project-title">SunLife Online Insurance System</h3>
+                    <span class="project-subtitle">Java JDBC & MSSQL</span>
+                    <p class="project-desc">Enterprise management application featuring automated client policy tracking, billing workflows, and relational database integrity.</p>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="glass-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/scholarship.png" alt="CICT Student Scholarship Portal" class="project-img">
+                    </div>
+                    <h3 class="project-title">CICT Student Scholarship Portal</h3>
+                    <span class="project-subtitle">HTML, JS, PHP, CSS</span>
+                    <p class="project-desc">A web-based scholarship platform designed to streamline student registration, securely manage academic records, and facilitate administrative data processing.</p>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="glass-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/synctrust.png" alt="SyncTrust Multi Purpose Cooperative System" class="project-img">
+                    </div>
+                    <h3 class="project-title">SyncTrust Multi Purpose Cooperative System</h3>
+                    <span class="project-subtitle">HTML, CSS, JS, PHP</span>
+                    <p class="project-desc">A comprehensive cooperative management system enabling efficient member registration, automated loan tracking, and secure financial transaction handling.</p>
+                </article>
+
+                <!-- Project 4: SyncTrust Flutter Mobile Application -->
+                <article class="glass-card project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/mobile_app.png" alt="SyncTrust mobile application built with Flutter" class="project-img">
+                    </div>
+                    <h3 class="project-title">SyncTrust Mobile Application</h3>
+                    <span class="project-subtitle">FLUTTER</span>
+                    <p class="project-desc">A Flutter-based mobile application developed as the mobile companion to the SyncTrust cooperative management system, providing members with a modern and convenient way to access cooperative services through a mobile interface.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section container">
+            <div class="section-header">
+                <span class="subtitle">Get In Touch</span>
+                <h2 class="title">Contact Me</h2>
+            </div>
+
+            <div class="contact-container">
+                <!-- Left Column: Email & Location -->
+                <div class="contact-info-column">
+                    <article class="glass-card contact-card">
+                        <svg class="contact-icon" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <h3 class="contact-card-title">Email</h3>
+                        <span class="contact-card-detail">costaleschristian81@gmail.com</span>
+                        <a href="mailto:costaleschristian81@gmail.com" class="contact-link">Send a message</a>
+                    </article>
+
+                    <article class="glass-card contact-card">
+                        <svg class="contact-icon" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <h3 class="contact-card-title">Location</h3>
+                        <span class="contact-card-detail">Prenza 1, Marilao, Bulacan, Philippines</span>
+                    </article>
+                </div>
+
+                <!-- Right Column: Social Links -->
+                <div class="contact-social-column">
+                    <a href="https://www.linkedin.com/in/christian-costales" target="_blank" rel="noopener noreferrer" class="glass-card contact-card social-card">
+                        <svg class="contact-icon" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <h3 class="contact-card-title">LinkedIn</h3>
+                        <span class="contact-card-detail">christian-costales</span>
+                        <span class="contact-link">Visit Profile</span>
+                    </a>
+
+                    <a href="https://github.com/costaleschristian81-stack" target="_blank" rel="noopener noreferrer" class="glass-card contact-card social-card">
+                        <svg class="contact-icon" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <h3 class="contact-card-title">GitHub</h3>
+                        <span class="contact-card-detail">GitHub Profile</span>
+                        <span class="contact-link">View GitHub</span>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/19nCKERyRm/" target="_blank" rel="noopener noreferrer" class="glass-card contact-card social-card">
+                        <svg class="contact-icon" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <h3 class="contact-card-title">Facebook</h3>
+                        <span class="contact-card-detail">Facebook Profile</span>
+                        <span class="contact-link">Visit Profile</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <a href="#" class="footer-logo">Christian T. Costales</a>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="footer-copyright">&copy; 2026 Christian T. Costales. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
